@@ -33,7 +33,7 @@ class NativeLoader {
             libs = new String[]{"libgcc_s_seh_64-1.dll","libstdc++_64-6.dll","libCoinUtils-3.dll","Clp.dll",};
         } else if (osName.startsWith("linux")) {
         	path = library+"/linux64/";
-        	libs = new String[]{"libCoinUtils.so.3","libClp.so"};
+        	libs = new String[]{};
             BridJ.addNativeLibraryDependencies("Clp", "CoinUtils");
         } else {
             throw new UnsupportedOperationException("Platform " + osName + ":" + osArch + " not supported");
